@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="hospitalDataSet" targetNamespace="http://tempuri.org/hospitalDataSet.xsd" xmlns:mstns="http://tempuri.org/hospitalDataSet.xsd" xmlns="http://tempuri.org/hospitalDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="hospitalConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="hospitalConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Project_Hospital.Properties.Settings.GlobalReference.Default.hospitalConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="appointmentTableAdapter" GeneratorDataComponentClassName="appointmentTableAdapter" Name="appointment" UserDataComponentName="appointmentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hospitalConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id`, `appointment date`, `appointment clock`, `appointment department`, `appointment doctor`, `appointment status`, `patient tc` FROM `appointment`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="departmentTableAdapter" GeneratorDataComponentClassName="departmentTableAdapter" Name="department" UserDataComponentName="departmentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hospitalConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id`, `department name` FROM `department`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="doctorsTableAdapter" GeneratorDataComponentClassName="doctorsTableAdapter" Name="doctors" UserDataComponentName="doctorsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hospitalConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id`, `doctor name`, `doctor surname`, `doctor department`, `doctor tc no`, `doctor password` FROM `doctors`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="patientTableAdapter" GeneratorDataComponentClassName="patientTableAdapter" Name="patient" UserDataComponentName="patientTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hospitalConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id`, `patient name`, `patient surname`, `patient tc no`, `patient phone no`, `patient password`, `patient gender` FROM `patient`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="secretaryTableAdapter" GeneratorDataComponentClassName="secretaryTableAdapter" Name="secretary" UserDataComponentName="secretaryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hospitalConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id`, `secretary name`, `secretary surname`, `secretary tc no`, `secretary password` FROM `secretary`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="hospitalDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="hospitalDataSet" msprop:Generator_UserDSName="hospitalDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="appointment" msprop:Generator_TableClassName="appointmentDataTable" msprop:Generator_TableVarName="tableappointment" msprop:Generator_TablePropName="appointment" msprop:Generator_RowDeletingName="appointmentRowDeleting" msprop:Generator_RowChangingName="appointmentRowChanging" msprop:Generator_RowEvHandlerName="appointmentRowChangeEventHandler" msprop:Generator_RowDeletedName="appointmentRowDeleted" msprop:Generator_UserTableName="appointment" msprop:Generator_RowChangedName="appointmentRowChanged" msprop:Generator_RowEvArgName="appointmentRowChangeEvent" msprop:Generator_RowClassName="appointmentRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="department" msprop:Generator_TableClassName="departmentDataTable" msprop:Generator_TableVarName="tabledepartment" msprop:Generator_TablePropName="department" msprop:Generator_RowDeletingName="departmentRowDeleting" msprop:Generator_RowChangingName="departmentRowChanging" msprop:Generator_RowEvHandlerName="departmentRowChangeEventHandler" msprop:Generator_RowDeletedName="departmentRowDeleted" msprop:Generator_UserTableName="department" msprop:Generator_RowChangedName="departmentRowChanged" msprop:Generator_RowEvArgName="departmentRowChangeEvent" msprop:Generator_RowClassName="departmentRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="doctors" msprop:Generator_TableClassName="doctorsDataTable" msprop:Generator_TableVarName="tabledoctors" msprop:Generator_TablePropName="doctors" msprop:Generator_RowDeletingName="doctorsRowDeleting" msprop:Generator_RowChangingName="doctorsRowChanging" msprop:Generator_RowEvHandlerName="doctorsRowChangeEventHandler" msprop:Generator_RowDeletedName="doctorsRowDeleted" msprop:Generator_UserTableName="doctors" msprop:Generator_RowChangedName="doctorsRowChanged" msprop:Generator_RowEvArgName="doctorsRowChangeEvent" msprop:Generator_RowClassName="doctorsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="patient" msprop:Generator_TableClassName="patientDataTable" msprop:Generator_TableVarName="tablepatient" msprop:Generator_TablePropName="patient" msprop:Generator_RowDeletingName="patientRowDeleting" msprop:Generator_RowChangingName="patientRowChanging" msprop:Generator_RowEvHandlerName="patientRowChangeEventHandler" msprop:Generator_RowDeletedName="patientRowDeleted" msprop:Generator_UserTableName="patient" msprop:Generator_RowChangedName="patientRowChanged" msprop:Generator_RowEvArgName="patientRowChangeEvent" msprop:Generator_RowClassName="patientRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="secretary" msprop:Generator_TableClassName="secretaryDataTable" msprop:Generator_TableVarName="tablesecretary" msprop:Generator_TablePropName="secretary" msprop:Generator_RowDeletingName="secretaryRowDeleting" msprop:Generator_RowChangingName="secretaryRowChanging" msprop:Generator_RowEvHandlerName="secretaryRowChangeEventHandler" msprop:Generator_RowDeletedName="secretaryRowDeleted" msprop:Generator_UserTableName="secretary" msprop:Generator_RowChangedName="secretaryRowChanged" msprop:Generator_RowEvArgName="secretaryRowChangeEvent" msprop:Generator_RowClassName="secretaryRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

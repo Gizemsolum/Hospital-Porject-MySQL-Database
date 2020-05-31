@@ -1,0 +1,2 @@
+# SELECT * FROM hospital.appointment WHERE LOCATE(appointment department,"HeartandVesselDiseases");
+SELECT * FROM hospital.appointment WHERE LIKE 'H%'
